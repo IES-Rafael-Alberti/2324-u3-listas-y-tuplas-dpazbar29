@@ -2,6 +2,7 @@
 
 
 def mostrarAsignaturasNotas(asignaturas):
+    '''pide las notas de cada asiantura'''
     notas = []
     cont = 0
 
@@ -12,6 +13,7 @@ def mostrarAsignaturasNotas(asignaturas):
     return notas
 
 def mensajeSalida(asignaturas,notas):
+    '''muestra la nota de cada asignatura'''
     resultado = []
     cont = 0
     while cont < len(asignaturas):

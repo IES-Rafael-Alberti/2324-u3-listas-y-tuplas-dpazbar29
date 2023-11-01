@@ -1,6 +1,7 @@
 #3.1.1
 
 def mostrarAsignaturas(asignaturas):
+    '''muestra las asignaturas de la lista'''
     resultado = []
     for i in range(0,len(asignaturas)):
         resultado.append(asignaturas[i])

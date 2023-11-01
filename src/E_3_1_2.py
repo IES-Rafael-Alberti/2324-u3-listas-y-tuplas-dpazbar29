@@ -1,6 +1,7 @@
 #3.1.2
 
 def mostrarAsignaturas(asignaturas):
+    '''muestra las asignaturas de la lista'''
     resultado = []
     cont = 0
     while cont < len(asignaturas):

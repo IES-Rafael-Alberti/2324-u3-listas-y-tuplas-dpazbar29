@@ -1,5 +1,6 @@
 #3.1.4
 def pedirNumeros():
+    '''pide los números de la primitiva'''
     numeros = []
     cont = 1
     while cont < 9:
@@ -10,6 +11,7 @@ def pedirNumeros():
     return numeros
 
 def ordenarMayorMenor(numeros):
+    '''ordena los numeros de mayor a menor'''
     numeros.sort()
     return numeros
 
