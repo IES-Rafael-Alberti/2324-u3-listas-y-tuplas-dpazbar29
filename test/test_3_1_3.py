@@ -1,9 +1,12 @@
 import pytest 
 from src.E_3_1_3 import *
 
-#def test_mostrarAsignaturasNotas(monkeypatch):
-    #monkeypatch.
-
+def test_mostrarAsignaturasNotas(monkeypatch):
+    input_values = [1]
+    def mock_input(s):
+        return input_values.pop(0)
+    monkeypatch.setattr("builtins.input",mock_input)
+    assert mostrarAsignaturasNotas(input_values) == [1]
 
 @pytest.mark.parametrize(
     "input_x,input_y,expected",

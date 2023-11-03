@@ -4,7 +4,7 @@ def pedirNumeros():
     numeros = []
     cont = 1
     while cont < 9:
-        numero = input("Introduce el numero " + str(cont) + ": ")
+        numero = int(input("Introduce el numero " + str(cont) + ": "))
         numeros.append(numero)
         cont += 1
 

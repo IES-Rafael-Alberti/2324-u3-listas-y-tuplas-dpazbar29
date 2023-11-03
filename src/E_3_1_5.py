@@ -2,11 +2,9 @@
 
 def mostrar(numeros):
     '''voltea la cadena y la devuelve'''
-    resultado = []
-    for i in range((len(numeros)-1),-1,-1): 
-        resultado.append(str(numeros[i]))
-        strResultado = ",".join(resultado)
-    return strResultado
+    numeros.reverse()
+    resultado = ",".join(map(str,numeros))
+    return resultado
 
 
 if __name__ == "__main__":

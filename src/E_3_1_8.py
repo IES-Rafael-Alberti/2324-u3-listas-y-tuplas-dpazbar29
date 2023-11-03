@@ -5,17 +5,17 @@ def palindromo(palabra):
     palabra = palabra.lower()
     palabra_invertida = palabra[::-1]
 
-    if palabra == palabra_invertida:
-        return True
-    else:
-        return False
+    return palabra == palabra_invertida
     
-def mensajeSalida(verif,palabra):
+def mensajeSalidaSi(verif):
     '''devuelve si es palindromo o no'''
     if verif == True:
-        return "La palabra " + str(palabra) + " es palíndromo"
+        return "La palabra es palíndromo"
+
+def mensajeSalidaNo(verif):
     if verif == False:
-        return "La palabra " + str(palabra) + " no es palíndromo"
+        return "La palabra no es palíndromo"
+    
 
 if __name__ == "__main__":
 
@@ -24,7 +24,11 @@ if __name__ == "__main__":
 
     #proceso
     verif = palindromo(palabra)
-    salida = mensajeSalida(verif,palabra)
+    salida_si = mensajeSalidaSi(verif)
+    salida_no = mensajeSalidaNo(verif)
 
     #salida
-    print(salida)
+    if verif == True:
+        print(salida_si)
+    else:
+        print(salida_no)

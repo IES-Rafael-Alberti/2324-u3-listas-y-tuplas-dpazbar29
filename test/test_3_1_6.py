@@ -1,7 +1,14 @@
-import pytest 
 from src.E_3_1_6 import *
+import pytest 
 
-#monkeypatch pedir notas
+
+def test_pedirNotas(monkeypatch):
+    input_values = [1]
+    def mock_input(s):
+        return input_values.pop(0)
+    monkeypatch.setattr("builtins.input",mock_input)
+    assert pedirNotas(input_values) == [1]
+
 
 @pytest.mark.parametrize(
     "input_x,input_y,expected",
